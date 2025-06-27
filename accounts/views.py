@@ -6,13 +6,14 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-
+from drf_spectacular.utils import extend_schema
 from .serializers import UserCreationSerializer, UserLoginSerializer
 
 # Create your views here.
 class UserRegistrationView(CreateAPIView):
     serializer_class = UserCreationSerializer
 
+@extend_schema(request=UserLoginSerializer)
 class LoginView(APIView):
     def post(self, request):
         serializer = UserLoginSerializer(data = request.data)
