@@ -9,7 +9,7 @@ USER = get_user_model()
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
-    author = models.ForeignKey(USER, on_delete=models.CASCADE)
+    author = models.ForeignKey(USER, on_delete=models.CASCADE, related_name="author_post")
     created_on = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     publish = models.BooleanField(default=True)
