@@ -50,7 +50,8 @@ A RESTful API built with Django and Django REST Framework to manage blog authors
 > Then include in headers:
 >
 > ```http
-> Authorization: Bearer <your-token>
+> Authorization: Bearer <your-token> <br>
+>omit Bearer when using the interactive Swagger UI, Just use the token alone.
 > ```
 
 ---
@@ -67,17 +68,9 @@ A RESTful API built with Django and Django REST Framework to manage blog authors
 
 ## 📚 API Documentation
 
-> Interactive Swagger docs available at:
->
-> ```
-> /api/schema/swagger-ui/
-> ```
->
-> or:
->
-> ```
-> /api/schema/
-> ```
+> Interactive Swagger docs available, explore and test the API interactively at:
+> `http://127.0.0.1:8000/`
+> 
 
 ---
 
@@ -102,11 +95,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 ---
-## 📚 API Docs
-Explore and test the API interactively using Swagger UI:<br>
-`http://127.0.0.1:8000/`
 
----
 ## 📬 Contact
 Feel free to contribute or reach out:<br>
 **GitHub:** *@johnpauljpc* <br>
